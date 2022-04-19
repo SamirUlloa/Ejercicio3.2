@@ -12,11 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:text="Registro de Empleados"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        android:textAlignment="center"
-        android:textSize="18dp"
-        android:text="Registro de Empleados" />
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView12"
@@ -125,18 +126,22 @@
 
     <Button
         android:id="@+id/btnGuardar"
-        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Registrar Empleado" />
+        android:layout_margin="10dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Registrar Empleado"
+        app:icon="@android:drawable/ic_menu_save" />
 
     <Button
         android:id="@+id/btnLista"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lista de Empleados" />
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Lista de Empleados"
+        app:icon="@android:drawable/ic_menu_view" />
 
 
 </LinearLayout>

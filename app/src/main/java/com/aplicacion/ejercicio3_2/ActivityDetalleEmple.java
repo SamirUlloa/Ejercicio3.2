@@ -27,7 +27,7 @@ public class ActivityDetalleEmple extends AppCompatActivity {
     DatabaseReference mDatabase;
 
     EditText txtEmpledoNombre, txtEmpledoApellido, txtEmpledoEdad, txtEmpledoDireccion, txtEmpledoPuesto;
-    Button btnActualizar, btnEliminar;
+    Button btnActualizar, btnEliminar, btnAtras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +47,7 @@ public class ActivityDetalleEmple extends AppCompatActivity {
 
         btnActualizar = (findViewById(R.id.btnActualizar));
         btnEliminar = (findViewById(R.id.btnEliminar));
+        btnAtras = (Button) findViewById(R.id.btnVolver2);
 
         infoEmpleado();
 
@@ -85,6 +86,16 @@ public class ActivityDetalleEmple extends AppCompatActivity {
                 dialog.show();
             }
         });
+
+        // volver a pagina principal
+        btnAtras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),ActivityListaEmple.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     public void infoEmpleado(){

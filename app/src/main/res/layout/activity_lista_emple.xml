@@ -8,16 +8,30 @@
     android:background="@color/white"
     tools:context=".ActivityListaEmple">
 
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="57dp"
+        android:layout_height="35dp"
+        android:backgroundTint="#4CAF50"
+        app:icon="?attr/actionModeCloseDrawable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:textSize="18dp"
+        android:text="Lista de Empleados"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        android:textAlignment="center"
-        android:text="Lista de Empleados" />
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <ListView
         android:id="@+id/listaP"

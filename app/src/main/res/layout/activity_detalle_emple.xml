@@ -8,16 +8,30 @@
     android:background="@color/white"
     tools:context=".ActivityDetalleEmple">
 
+    <Button
+        android:id="@+id/btnVolver2"
+        android:layout_width="59dp"
+        android:layout_height="37dp"
+        android:backgroundTint="#4CAF50"
+        app:icon="?attr/actionModeCloseDrawable"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:text="Detalles del Empleado Seleccionado"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        android:textSize="18dp"
-        android:textAlignment="center"
-        android:text="Detalles del Empleado Seleccionado" />
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView5"
@@ -139,13 +153,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Actualizar" />
+        android:backgroundTint="#4CAF50"
+        android:text="Actualizar"
+        app:icon="@android:drawable/ic_menu_edit" />
 
     <Button
         android:id="@+id/btnEliminar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Eliminar" />
+        android:backgroundTint="#4CAF50"
+        android:text="Eliminar"
+        app:icon="@android:drawable/ic_menu_delete" />
 
 </LinearLayout>

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,6 +23,7 @@ public class ActivityListaEmple extends AppCompatActivity {
     ListView listaP;
     CharSequence options[];
     String seleccion;
+    Button btnAtras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,7 @@ public class ActivityListaEmple extends AppCompatActivity {
         setContentView(R.layout.activity_lista_emple);
 
         listaP = (ListView) findViewById(R.id.listaP);
+        btnAtras = (Button) findViewById(R.id.btnVolver);
 
         Query query = FirebaseDatabase.getInstance().getReference().child("empleados");
         FirebaseListOptions<Empleados> options = new FirebaseListOptions.Builder<Empleados>()
@@ -46,6 +49,7 @@ public class ActivityListaEmple extends AppCompatActivity {
                 TextView tvDireccion = v.findViewById(R.id.tvDireccion);
                 TextView tvPuesto = v.findViewById(R.id.tvPuesto);
                 //ImageView imagenFoto = v.findViewById(R.id.imagenFoto);
+
 
                 Empleados std = (Empleados) model;
                 tvId.setText(std.getId().toString());
@@ -73,6 +77,16 @@ public class ActivityListaEmple extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // volver a pagina principal
+        btnAtras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 
